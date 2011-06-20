@@ -1,4 +1,12 @@
 TwitterOauth::Application.routes.draw do
+  #get "index/index"
+  #get "index/oauth"
+  #get "index/callback"
+
+  root to: "index#index", as: :index
+  get "/oauth" => "index#oauth", as: :oauth
+  get "/callback" => "index#callback", as: :callback
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
